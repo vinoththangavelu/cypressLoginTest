@@ -5,7 +5,10 @@ import { history } from './_helpers';
 import { Nav, Alert, PrivateRoute } from './_components';
 import { Home } from './home';
 import { AccountLayout } from './account';
-import { UsersLayout } from './users';
+// import { UsersLayout } from './users';
+import { UsersLayout } from './users/UsersLayout';
+
+import {Fillter} from "./users/Fillter"
 
 export { App };
 
@@ -17,7 +20,9 @@ function App() {
 
     return (
         <div className="app-container bg-light">
+           
             <Nav />
+            
             <Alert />
             <div className="container pt-4 pb-4">
                 <Routes>
@@ -25,6 +30,9 @@ function App() {
                     <Route element={<PrivateRoute />}>
                         <Route path="/" element={<Home />} />
                         <Route path="users/*" element={<UsersLayout />} />
+
+                        <Route path="fillter/*" element={<Fillter />} />
+
                     </Route>
                     {/* public */}
                     <Route path="account/*" element={<AccountLayout />} />

@@ -1,0 +1,11 @@
+.popupClose{
+    background: #fff0f0;
+    width: 500px;
+    position: relative;
+}
+ 
+.CloseX{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
